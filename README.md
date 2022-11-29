@@ -1,0 +1,1 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/nsh7jqju5ucddxfg?svg=true)](https://ci.appveyor.com/project/Artem18rus/ahj-dz6-working-files-dnd)

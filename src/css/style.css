@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  list-style-type: none;
+}
+
+input {
+  all: unset;
+}
+
+h1 {
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 10px 10px 5px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.list {
+  display: flex;
+  width: 70%;
+  margin-top: 10px;
+  column-gap: 8px;
+  padding: 8px;
+  background: #107ABB;
+  align-items: flex-start;
+}
+
+.items {
+  width: calc(100% / 3);
+  padding-bottom: 10px;
+  background: #DEE2E5;
+  border-radius: 10px;
+}
+
+.items-item {
+  background: #FFFFFF;
+  border-radius: 5px;
+  margin: 8px;
+  padding: 8px;
+  font-size: 14px;
+  position: relative;
+  cursor: default;
+}
+
+#myId:before {
+  content:"\00D7";
+  color: #6B7F8A;
+  cursor: pointer;
+  position: absolute;  
+  width: 14px;
+  height: 14px;
+  background: #EAEDEF;
+  font-size: 12px;
+  text-align: center;
+  right: 2px;
+  top: 2px;
+}
+
+.add-card {
+  padding-left: 15px;
+  color: #6B7F8A;
+  font-size: 14px;
+  margin-top: 20px;
+  cursor: pointer;
+  position: relative;
+}
+
+.add-card::before {
+  content:"\271A";
+  color:#6B7F8A;
+  font-size: 15px;
+  margin-right: 5px;
+  margin-left: -5px;
+  cursor: pointer;  
+}
+
+.items-item.dragged {
+  border-radius: 10px;
+  position: absolute;
+  z-index: 999;
+  pointer-events: none;
+  background: #fff;
+}
+
+.formAddCard {
+  display: block;
+  background: #FFFFFF;
+  border-radius: 5px;
+  padding: 8px;
+  font-size: 14px;
+  width: calc(100% - 32px);
+  margin: 8px;
+  cursor: text;
+}
+
+.btn {
+  display: block;
+  background-color: #4f9f4f;
+  padding: 10px;
+  border: none;
+  color: #fff;
+  margin: 8px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.btn-close {
+  display: flex;
+  align-items: center;
+}
+
+.closeCard::after {
+  content:"\00D7";
+  color:#6B7F8A;
+  font-size: 30px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.bgr {
+  display: block;
+  background: #C3CBCF;
+  position: relative;
+  z-index: 50;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: #274354;
+}
