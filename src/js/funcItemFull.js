@@ -1,3 +1,5 @@
+// функция появления крестика и удаления записей при нажатии на крестик:
+
 export default function funcItemsFull() {
   const itemsItem = document.querySelectorAll('.items-item');
 

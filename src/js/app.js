@@ -1,6 +1,8 @@
 import funcItemsFull from './funcItemFull';
 import dragging from './dragging';
 
+// добавление новых записей и их удаление:
+
 const addCard = document.querySelectorAll('.add-card');
 addCard.forEach((item) => {
   item.addEventListener('click', (e) => {

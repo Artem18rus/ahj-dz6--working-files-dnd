@@ -1,3 +1,5 @@
+// перетаскивание записей:
+
 export default function dragging() {
   let actualElement;
   const onMouseOver = (e) => {
