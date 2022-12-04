@@ -1,57 +1,52 @@
-import funcItemsFull from './funcItemFull';
-import dragging from './dragging';
+import Tickets from './Tickets';
 
-// добавление новых записей и их удаление:
+const demoContent = [
+  {
+    id: 10,
+    column: 'todo',
+    text: 'Welcome!!!',
+  },
+  {
+    id: 2,
+    column: 'todo',
+    text: 'This is a card.',
+  },
+  {
+    id: 3,
+    column: 'todo',
+    text: 'You can attach pictures and files...',
+  },
+  {
+    id: 4,
+    column: 'todo',
+    text: '... or checklists.',
+  },
+  {
+    id: 5,
+    column: 'in-progress',
+    text: 'Invite your team to this board using the Add Members button',
+  },
+  {
+    id: 6,
+    column: 'in-progress',
+    text: 'Use color-coded labels for organization',
+  },
+  {
+    id: 7,
+    column: 'done',
+    text: 'To learn more tricks, check out the guide.',
+  },
+  {
+    id: 8,
+    column: 'done',
+    text: 'Want updates on new features?',
+  },
+  {
+    id: 1,
+    column: 'done',
+    text: 'Nees help?',
+  },
+];
 
-const addCard = document.querySelectorAll('.add-card');
-addCard.forEach((item) => {
-  item.addEventListener('click', (e) => {
-    const menuAddCard = document.querySelector('.menu-add-card');
-    if (menuAddCard == null) {
-      item.insertAdjacentHTML('afterEnd', `
-      <div id="idAddCard" class='menu-add-card'>
-        <input type="text" placeholder="Enter a title for this card..." class="formAddCard"></input>
-        <div class="btn-close">
-          <button type="button" class='btn'>Add Card</button>
-        <div class="closeCard"></div>
-        </div>
-      </div>
-    `);
-      const btn = document.querySelector('.btn');
-      btn.addEventListener('click', () => {
-        const text = document.getElementsByTagName('input')[0];
-        const val = text.value;
-        if (val.length === 0) {
-          throw new Error('Поле должно быть заполнено!');
-        }
-        const btnCard = btn.closest('.items').classList[1];
-        const addCardItem = e.target.closest('.items').children[e.target.closest('.items').children.length - 3];
-        if (btnCard === 'todo') {
-          addCardItem.insertAdjacentHTML('beforeEnd', `
-              <li class="items-item">${val}</li>
-            `);
-        }
-        if (btnCard === 'in-progress') {
-          addCardItem.insertAdjacentHTML('beforeEnd', `
-              <li class="items-item">${val}</li>
-            `);
-        }
-        if (btnCard === 'done') {
-          addCardItem.insertAdjacentHTML('beforeEnd', `
-              <li class="items-item">${val}</li>
-            `);
-        }
-        funcItemsFull();
-        document.querySelector('.menu-add-card').remove();
-      });
-      const closeCard = document.querySelector('.closeCard');
-      closeCard.addEventListener('click', () => {
-        document.querySelector('.menu-add-card').remove();
-      });
-    } else {
-      document.querySelector('.menu-add-card').remove();
-    }
-  });
-});
-funcItemsFull();
-dragging();
+const tickets = new Tickets(demoContent);
+tickets.init();

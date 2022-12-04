@@ -1,52 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link rel="icon" href="./favicon.png" type="image/png">
+    <title>ahj-dz6--working-files-dnd</title>
 </head>
-
 <body>
-    <div class="list">
-      <div class="items todo">
-        <h1>TODO</h1>
-        <ul class="items-todo parent">
-          <li class="items-item">Welcome!!!</li>
-          <li class="items-item">This is a card.</li>
-          <li class="items-item">Click on a card to see what's behind it.</li>
-          <li class="items-item">You can attach pictures and files...</li>
-          <li class="items-item">... any kind of hyperlink ...</li>
-          <li class="items-item">... or checklists.</li>
-        </ul>
-        <div class="add-card">Add another card</div>
-      </div>
-      <div class="items in-progress">
-        <h1>IN PROGRESS</h1>
-        <ul class="itemsIn-progress parent">
-          <li class="items-item">Invite your team to this board using the Add Members button</li>
-          <li class="items-item">Drag people onto a card to indicate that they're responsible for it.</li>
-          <li class="items-item">Use color-coded labels for organization</li>
-          <li class="items-item">Make as many lists as you need!</li>
-          <li class="items-item">Try dragging cards anywhere.</li>
-          <li class="items-item">Finished with a card? Archive it.</li>
-        </ul>
-        <div class="add-card">Add another card</div>
-      </div>
-      <div class="items done">
-        <h1>DONE</h1>
-        <ul class="itemsDone parent">
-          <li class="items-item">To learn more tricks, check out the guide.</li>
-          <li class="items-item">Use as many boards as you want. We'll make more!</li>
-          <li class="items-item">Want to use keyboard shortcuts? We have them!</li>
-          <li class="items-item">Want updates on new features?</li>
-          <li class="items-item">Nees help?</li>
-          <li class="items-item">Want current tips, usage examples, or API info?</li>
-        </ul>
-        <div class="add-card">Add another card</div>
-      </div>
+    <div class="container">
+        <div class="tasks">
+            <div class="column">
+                <div class="column-title">Todo</div>
+                <div class="column-items" data-id="todo"></div>
+                <a class="add-item"><span>Add another card</span></a>
+            </div>
+            <div class="column">
+                <div class="column-title">In progress</div>
+                <div class="column-items" data-id="in-progress"></div>
+                <a class="add-item"><span>Add another card</span></a>
+            </div>
+            <div class="column">
+                <div class="column-title">Done</div>
+                <div class="column-items" data-id="done"></div>
+                <a class="add-item"><span>Add another card</span></a>
+            </div>
+        </div>
     </div>
 </body>
-
 </html>
